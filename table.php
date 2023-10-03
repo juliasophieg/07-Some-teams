@@ -1,13 +1,17 @@
 <?php require __DIR__ . '/data.php'; ?>
 
-  <?php foreach($teams as $team => $key): ?>
+  <?php foreach($teams as $team => $teamInfo): ?>
+
   <tr>
-    <td> <?php echo $team?> </td>
-    <td> <?php echo $key['league']?> </td>
-    <td> <?php echo $key['last-time-champions']?> </td>
-    <td> <?php echo $key['city']?> </td>
-    <td><!-- Insert keys with nickname value --></td>
-    <td> <a href= "<?php echo $key['url']?>"><?php echo $key['url']?></a></td>
+    <td> <?= $team ?></td>
+    <td> <?= $teamInfo['league'] ?></td>
+    <td> <?= $teamInfo['last-time-champions'] ?></td>
+    <td> <?= $teamInfo['city']?> </td>
+    <td> <?php if (array_key_exists('nickname', $teamInfo)){
+                  echo $teamInfo['nickname'];
+                  } else { } ?>
+    </td>
+    <td> <a href= "<?= $teamInfo['url']?>"><?= $team ?></a></td>
   </tr>
   <?php endforeach; ?>
 
