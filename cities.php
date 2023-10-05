@@ -2,14 +2,14 @@
 
 <?php
 
-
 $cities = [];
 
-foreach ($teams as $team => $teamInfo) {
+foreach ($teams as $team => $teamInfo) :
     $cities[] = $teamInfo['city'];
-};
+endforeach;
 
-$uniqueCities = array_unique($cities); //Using array_unique to sort out any doubles.
-$uniqueCityList = implode(', ', $uniqueCities); // Using implode to print out array values as string seperated with commas.
+$uniqueCities = array_unique($cities); //Using array_unique to sort out any duplicates.
 
-echo $uniqueCityList;
+foreach ($uniqueCities as $uniqueCity) : ?>
+    <button class="city-btn"><?= $uniqueCity; ?></button> 
+<?php endforeach ?>
