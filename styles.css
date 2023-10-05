@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, rgb(119, 0, 255), rgb(221, 4, 44));
+    font-family: 'Jaldi', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+h2, h3 {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+main {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.intro, .cities {
+    background-color: rgb(67, 25, 109);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.intro {
+    width: 40%;
+}
+
+.cities {
+    width: 60%;
+}
+
+.city-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1rem;
+
+}
+
+.city-btn {
+    border: none;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-family: 'Jaldi', sans-serif;
+    font-size: 1rem;;
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 15px;
+    color: black;
+}
+
+th {
+    background-color: rgb(67, 25, 109);
+    color: white;
+    font-size: 1.25rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+th:first-child {
+    border-top-left-radius: 15px;
+}
+
+th:last-child {
+    border-top-right-radius: 15px;
+}
+
+tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+td {
+    padding: 1rem;
+}
+
+a {
+    color: rgb(67, 25, 109);
+    font-weight: bold;
+}
